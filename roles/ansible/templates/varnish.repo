@@ -1,0 +1,6 @@
+[varnish]
+name=Varnish for Enterprise Linux 6
+baseurl=https://repo.varnish-cache.org/redhat/{{ varnish_version }}/el6/
+enabled=1
+gpgkey=https://repo.varnish-cache.org/GPG-key.txt
+gpgcheck=1
