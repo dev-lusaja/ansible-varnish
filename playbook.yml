@@ -27,4 +27,4 @@
   - https_proxy: "{{ https_proxy }}"
 
   roles:
-    - ansible
+    - varnish

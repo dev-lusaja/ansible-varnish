@@ -1,0 +1,11 @@
+---
+- name: Add repo file
+  template: src=varnish.repo dest=/etc/yum.repos.d/varnish.repo owner=root group=root mode=0644
+
+- name: Install Varnish
+  yum: name={{ item }} enablerepo=varnish state=present
+  with_items:
+    - varnish
+
+- name: Start and enable service
+  service: name=varnish state=started enabled=yes
